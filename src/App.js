@@ -1,9 +1,17 @@
-import React from "react";
-import ContactList from "./components/ContactList/ContactList";
-import ContactForm from "./components/ContactForm/ContactForm";
-import Filter from "./components/Filter/Filter";
+import React, { useEffect } from 'react';
+import ContactList from './components/ContactList/ContactList';
+import ContactForm from './components/ContactForm/ContactForm';
+import Filter from './components/Filter/Filter';
+import { useDispatch } from 'react-redux';
+import * as contactOperations from './redux/operations-phone/operations-phone';
 
 export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(contactOperations.fetchContact());
+  }, []);
+
   return (
     <div>
       <h1>Phonebook</h1>

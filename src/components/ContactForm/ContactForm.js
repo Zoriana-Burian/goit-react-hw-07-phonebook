@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import s from "./ContactForm.module.css";
-import { useDispatch } from "react-redux";
-import contactActions from "../../redux/actions-phone/actions-phone";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import s from './ContactForm.module.css';
+import { useDispatch } from 'react-redux';
+import * as contactOperations from '../../redux/operations-phone/operations-phone';
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
   const dispatch = useDispatch();
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
 
     switch (name) {
-      case "name":
+      case 'name':
         setName(value);
         break;
-      case "number":
+      case 'number':
         setNumber(value);
         break;
       default:
@@ -24,11 +24,11 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
-    dispatch(contactActions.addContact(name, number));
-    setName("");
-    setNumber("");
+    dispatch(contactOperations.addContact(name, number));
+    setName('');
+    setNumber('');
   };
 
   return (

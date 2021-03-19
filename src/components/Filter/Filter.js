@@ -1,12 +1,12 @@
-import s from "./Filter.module.css";
-import PropTypes from "prop-types";
-import { useDispatch, useSelector } from "react-redux";
-import contactActions from "../../redux/actions-phone/actions-phone";
+import s from './Filter.module.css';
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import * as contactActions from '../../redux/actions-phone/actions-phone';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const value = useSelector((state) => state.contacts.filter);
-  const onChange = (event) =>
+  const value = useSelector(state => state.contacts.filter);
+  const onChange = event =>
     dispatch(contactActions.changeFilter(event.target.value));
   return (
     <label className={s.label}>
