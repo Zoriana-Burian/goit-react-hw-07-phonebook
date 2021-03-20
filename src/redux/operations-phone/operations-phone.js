@@ -1,5 +1,4 @@
 import axios from 'axios';
-//import actions from '../../redux/actions-phone/actions-phone';
 import {
   addContactRequest,
   addContactSuccess,
@@ -13,14 +12,6 @@ import {
 } from '../../redux/actions-phone/actions-phone';
 
 axios.defaults.baseURL = 'http://localhost:4040';
-
-// export const fetchContact = () => dispatch => {
-//   dispatch(fetchContactRequest());
-//   axios
-//     .get('/contacts')
-//     .then(({ data }) => dispatch(fetchContactSuccess(data)))
-//     .catch(error => dispatch(fetchContactError(error)));
-// };
 
 export const fetchContact = () => async dispatch => {
   dispatch(fetchContactRequest());

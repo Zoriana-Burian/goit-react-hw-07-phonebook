@@ -12,8 +12,6 @@ export default function App() {
     dispatch(contactOperations.fetchContact());
   }, [dispatch]);
 
-  // useEffect(() => dispatch(contactOperations.fetchContact()), [dispatch]);
-
   return (
     <div>
       <h1>Phonebook</h1>
