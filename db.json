@@ -4,6 +4,16 @@
       "name": "Сергій",
       "number": "459-12-56",
       "id": 1
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "227-91-26",
+      "id": 2
+    },
+    {
+      "name": "Zoriana",
+      "number": "227-91-27",
+      "id": 3
     }
   ]
 }
