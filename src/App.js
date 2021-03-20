@@ -10,7 +10,9 @@ export default function App() {
 
   useEffect(() => {
     dispatch(contactOperations.fetchContact());
-  }, []);
+  }, [dispatch]);
+
+  // useEffect(() => dispatch(contactOperations.fetchContact()), [dispatch]);
 
   return (
     <div>
